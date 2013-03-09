@@ -20,8 +20,6 @@ window.AA.DropdownMenu = class AA.DropdownMenu
     @_buildMenuList()
     @_bind()
 
-    return @
-
   open: ->
     @isOpen = true
     @$menuList.fadeIn @options.fadeInDuration
@@ -29,20 +27,14 @@ window.AA.DropdownMenu = class AA.DropdownMenu
     @_positionMenuList()
     @_positionNipple()
 
-    return @
-
 
   close: ->
     @isOpen = false
     @$menuList.fadeOut this.options.fadeOutDuration
 
-    return @
-
   destroy: ->
     @$element.unbind()
     @$element = null
-
-    return @
 
   isDisabled: ->
     @$menuButton.hasClass("disabled")
